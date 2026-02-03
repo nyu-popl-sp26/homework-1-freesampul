@@ -1,3 +1,16 @@
+error id: C1ACA76B760CB3FB09669402C56D812C
+file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+### java.lang.IndexOutOfBoundsException: -1
+
+occurred in the presentation compiler.
+
+
+
+action parameters:
+offset: 3851
+uri: file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+text:
+```scala
 package popl
 
 object hw01 extends App:
@@ -77,13 +90,11 @@ object hw01 extends App:
     assert(plus(1, 1) == 2)
 
   //testPlus2(badplus)
-  def testRoot(): Unit =
-  assert(abs(root(8) - 2.0) < 1e-3)
-
-  def testAr(): Unit =
-  assert(ar(123) == 3)
-  assert(ar(-10) == 3)
-  testAr()
+    def testRoot(): Unit =
+    assert(abs(root(8) - 2.0) < 1e-3)
+    assert(abs(root(27) - 3.0) < 1e-3)
+    assert(abs(root(1) - 1.0) < 1e-3)
+    testRoot()
 
   /* Exercises */
 
@@ -94,9 +105,9 @@ object hw01 extends App:
     if n >= 0 then n else n * -1
 
   def ar(p: Int): Int =
-    if p < 0 then 1 + ar(-p)
-    else if p < 10 then 1
-    else 1 + ar(p/10)
+    if n < 0 then 1 + ar(-p[@@])
+
+
 
   def rep(s: String, t: String, n: Int): String =
     require (n >= 0)
@@ -124,3 +135,38 @@ object hw01 extends App:
     approxErr(c, 1.0, 0.0001)
 
 end hw01
+```
+
+
+presentation compiler configuration:
+Scala version: 3.3.7-bin-nonbootstrapped
+Classpath:
+<HOME>/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.7/scala3-library_3-3.3.7.jar [exists ], <HOME>/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar [exists ]
+Options:
+
+
+
+
+
+#### Error stacktrace:
+
+```
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:129)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:244)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:104)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:88)
+	dotty.tools.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:46)
+	dotty.tools.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:498)
+	scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:149)
+	scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:133)
+	scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:210)
+	scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	java.base/java.lang.Thread.run(Thread.java:1575)
+```
+#### Short summary: 
+
+java.lang.IndexOutOfBoundsException: -1

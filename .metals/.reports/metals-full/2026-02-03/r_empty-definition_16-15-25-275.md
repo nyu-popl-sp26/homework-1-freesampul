@@ -1,3 +1,14 @@
+error id: file://<WORKSPACE>/src/main/scala/popl/hw01.scala:scala/Unit#
+file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+empty definition using pc, found symbol in pc: scala/Unit#
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 3524
+uri: file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+text:
+```scala
 package popl
 
 object hw01 extends App:
@@ -77,13 +88,18 @@ object hw01 extends App:
     assert(plus(1, 1) == 2)
 
   //testPlus2(badplus)
-  def testRoot(): Unit =
-  assert(abs(root(8) - 2.0) < 1e-3)
+    def testRoot(): Unit =
+    assert(abs(root(8) - 2.0) < 1e-3)
+    assert(abs(root(27) - 3.0) < 1e-3)
+    assert(abs(root(1) - 1.0) < 1e-3)
+    testRoot()
 
-  def testAr(): Unit =
+def testAr(): Unit@@ =
   assert(ar(123) == 3)
   assert(ar(-10) == 3)
-  testAr()
+  println("testAr passed")
+
+testAr()
 
   /* Exercises */
 
@@ -96,7 +112,7 @@ object hw01 extends App:
   def ar(p: Int): Int =
     if p < 0 then 1 + ar(-p)
     else if p < 10 then 1
-    else 1 + ar(p/10)
+    else  1 + ar(p/10)
 
   def rep(s: String, t: String, n: Int): String =
     require (n >= 0)
@@ -124,3 +140,9 @@ object hw01 extends App:
     approxErr(c, 1.0, 0.0001)
 
 end hw01
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: scala/Unit#

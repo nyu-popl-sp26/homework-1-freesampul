@@ -1,3 +1,14 @@
+error id: file://<WORKSPACE>/src/main/scala/popl/hw01.scala:scala/Predef.assert(+1).
+file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 4286
+uri: file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+text:
+```scala
 package popl
 
 object hw01 extends App:
@@ -77,26 +88,14 @@ object hw01 extends App:
     assert(plus(1, 1) == 2)
 
   //testPlus2(badplus)
-  def testRoot(): Unit =
-  assert(abs(root(8) - 2.0) < 1e-3)
-
-  def testAr(): Unit =
-  assert(ar(123) == 3)
-  assert(ar(-10) == 3)
-  testAr()
 
   /* Exercises */
-
-  //Note for excersies: I had assistance with the explination for the math required for the root functions
-  //I asked chatgpt to breakdown the math for performing cube root, the functions were written by me
 
   def abs(n: Double): Double =
     if n >= 0 then n else n * -1
 
-  def ar(p: Int): Int =
-    if p < 0 then 1 + ar(-p)
-    else if p < 10 then 1
-    else 1 + ar(p/10)
+  def ar(p: Int): Int = ???
+
 
   def rep(s: String, t: String, n: Int): String =
     require (n >= 0)
@@ -123,4 +122,16 @@ object hw01 extends App:
   def root(c: Double): Double =
     approxErr(c, 1.0, 0.0001)
 
+def testRoot(): Unit =
+  assert(abs(root(8) - 2.0) < 1e-3)
+  assert(abs(root(27) - 3.0) < 1e-3)
+  asser@@t(abs(root(1) - 1.0) < 1e-3)
+
+testRoot()
 end hw01
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

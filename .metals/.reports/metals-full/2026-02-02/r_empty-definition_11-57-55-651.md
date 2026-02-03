@@ -1,3 +1,14 @@
+error id: file://<WORKSPACE>/src/main/scala/popl/hw01.scala:
+file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 4010
+uri: file://<WORKSPACE>/src/main/scala/popl/hw01.scala
+text:
+```scala
 package popl
 
 object hw01 extends App:
@@ -77,50 +88,42 @@ object hw01 extends App:
     assert(plus(1, 1) == 2)
 
   //testPlus2(badplus)
-  def testRoot(): Unit =
-  assert(abs(root(8) - 2.0) < 1e-3)
-
-  def testAr(): Unit =
-  assert(ar(123) == 3)
-  assert(ar(-10) == 3)
-  testAr()
 
   /* Exercises */
-
-  //Note for excersies: I had assistance with the explination for the math required for the root functions
-  //I asked chatgpt to breakdown the math for performing cube root, the functions were written by me
 
   def abs(n: Double): Double =
     if n >= 0 then n else n * -1
 
   def ar(p: Int): Int =
-    if p < 0 then 1 + ar(-p)
-    else if p < 10 then 1
-    else 1 + ar(p/10)
+    def arRec(p: Int, acc: Int): Int = 
+
 
   def rep(s: String, t: String, n: Int): String =
     require (n >= 0)
     def repRec(s: String, t: String, n:Int, acc: String): String =
-      if n > 0 then repRec(s, t, n-1, acc+","+t) else acc
+      if n > 0 then repRec(s, t, n-1, acc+n+","+t) else acc
     repRec(s,t,n, "")
 
 
   def approx(c: Double, xn: Double): Double =
-    xn - ((xn * xn * xn - c) / (3*(xn * xn)))
+    def approxRec(c: Double, xn: Double, nextX: Double): Double = 
+      if nextX < xn then (((xn)^3 - c) / 3*(xn)^2) else nextX
+    approx(c, xn, xn)
 
   def approxN(c: Double, xn: Double, n: Int): Double =
     require(n >= 0)
-    if (n == 0) xn 
-    else approxN(c, approx(c, xn), n-1)
+    if nextX < x@@n then (((xn)^3 - c) / 3*(xn)^2) else nextX
 
-  def approxErr(c: Double, xn: Double, epsilon: Double): Double = {
+  def approxErr(c: Double, xn: Double, epsilon: Double): Double =
     require (epsilon > 0) 
-    val nextX = approx(c,xn)
-    if (abs(nextX -xn) < epsilon) nextX 
-    else approxErr(c, nextX, epsilon)
-  }
 
   def root(c: Double): Double =
     approxErr(c, 1.0, 0.0001)
 
 end hw01
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 
