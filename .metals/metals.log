@@ -3656,3 +3656,36 @@ Exception in thread "pool-555-thread-1" java.lang.InterruptedException
 2026.02.03 16:18:13 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
 2026.02.03 16:18:17 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
 2026.02.03 16:18:17 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.03 16:18:53 INFO  Shutting down server
+2026.02.03 16:18:53 INFO  Memory monitor stopped
+2026.02.03 16:18:53 INFO  shutting down Metals
+2026.02.03 16:18:53 INFO  Exiting server
+2026.02.03 16:18:53 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1575)
+
+2026.02.04 11:44:42 INFO  Started: Metals version 1.6.5 in folders '/Users/sam/Desktop/School/Cs/pop/hw01' for client Visual Studio Code 1.108.1.
+2026.02.04 11:44:42 INFO  Memory monitor started
+2026.02.04 11:44:42 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.04 11:44:42 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 04, 2026 11:44:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.02.04 11:44:43 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+Feb 04, 2026 11:44:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+2026.02.04 11:44:43 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.04 11:44:43 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.04 11:44:43 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.04 11:45:19 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.04 11:45:19 WARN  no build target for: /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala
+2026.02.04 11:45:19 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.02.04 11:45:19 INFO  no build target found for /Users/sam/Desktop/School/Cs/pop/hw01/src/main/scala/popl/hw01.scala. Using presentation compiler with project's scala-library version: 3.3.7
